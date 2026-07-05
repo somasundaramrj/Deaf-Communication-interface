@@ -13,16 +13,6 @@ from werkzeug.utils import secure_filename
 # -------------------------------
 # FLASK APP SETUP
 # -------------------------------
-app = Flask(__name__)
-app.config["SECRET_KEY"] = "myverysecuresecretkey"
-app.config["UPLOAD_FOLDER"] = "uploads/videos"
-os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
-
-bcrypt = Bcrypt(app)
-
-# ✅ Proper CORS setup
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
-
 # -------------------------------
 # MONGODB CONNECTION
 # -------------------------------
