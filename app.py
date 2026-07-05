@@ -10,13 +10,6 @@ from flask_cors import CORS
 from pymongo import MongoClient
 from werkzeug.utils import secure_filename
 
-# -------------------------------
-# FLASK APP SETUP
-# -------------------------------
-# -------------------------------
-# MONGODB CONNECTION
-# -------------------------------
-MONGO_URI = "mongodb+srv://somu:Somu8499@cluster0.61aqpsp.mongodb.net/"
 client = MongoClient(MONGO_URI, tls=True, tlsCAFile=certifi.where())
 
 db = client["myAppDB"]
