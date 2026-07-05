@@ -13,27 +13,6 @@ from django import setup
 import json
 import threading
 import time
-
-# -------------------- Django minimal settings --------------------
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-settings.configure(
-    DEBUG=True,
-    ROOT_URLCONF=__name__,
-    ALLOWED_HOSTS=["*"],
-    SECRET_KEY="somesecretkey",
-    INSTALLED_APPS=[
-        "django.contrib.staticfiles",
-    ],
-    TEMPLATES=[{
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR],
-    }],
-    STATIC_URL="/static/",
-)
-
-setup()
-
 # -------------------- Load model and Mediapipe --------------------
 model = tf.keras.models.load_model("action.h5")
 mp_holistic = mp.solutions.holistic
