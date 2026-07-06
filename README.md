@@ -1,92 +1,70 @@
-# Deaf-Communication-interface
-communicate through the interface using the deep learning model such as the LSTM by gesture recognition
-Project Overview: Deaf Communication Interface Using Gesture Recognition
-1. Problem Statement
+Deaf-Communication-interface
+GestureBridge – AI-Powered Sign Language Communication Platform
 
-Deaf and mute individuals face challenges in communicating with people who do not know sign language. Traditional methods of communication, like pen and paper or text messaging, are not always convenient in real-time interactions. There is a need for a system that translates gestures into understandable language automatically, enabling smoother communication between deaf individuals and others.
+GestureBridge is an AI-powered web application developed to improve communication between sign language users and people who communicate using spoken or written language. The platform combines artificial intelligence, computer vision, and modern web technologies to provide an accessible, real-time communication experience while also supporting sign language learning.
 
-Key issues:
+The system uses a webcam to capture live video and processes each frame using MediaPipe and OpenCV to extract hand and body landmarks. These landmarks are converted into numerical data and passed to a trained deep learning model that recognizes sign language gestures. The predicted sign is then converted into readable text, allowing users who do not understand sign language to follow the conversation in real time.
 
-Communication barriers in daily life for deaf individuals.
+In addition to gesture recognition, GestureBridge provides a collaborative learning platform where users can upload, browse, and practice sign language videos. Videos are organized by category and difficulty level, making it easier for learners to discover and practice new signs. The platform also includes search and filtering capabilities to improve accessibility and navigation.
 
-Lack of real-time gesture-to-text or gesture-to-speech translation.
+The application follows a client-server architecture with a React.js frontend and a Flask backend. REST APIs enable seamless communication between the user interface, machine learning models, and the MongoDB database. Secure user authentication allows users to register, log in, and manage their profiles while maintaining data integrity.
 
-Existing solutions are limited, non-intuitive, or expensive.
+The project has been designed with scalability and accessibility as primary goals. Its modular architecture makes it easy to integrate additional sign languages, improve recognition accuracy with new AI models, and expand the platform with features such as real-time video communication, speech-to-sign translation, multilingual support, and mobile applications.
 
-Need for a portable and intelligent interface for ease of use.
+Features
+Real-time sign language recognition using artificial intelligence
+Live gesture detection through webcam
+Hand and body landmark extraction using MediaPipe
+Deep learning–based gesture classification
+Gesture-to-text translation
+Secure user registration and authentication
+Sign language learning portal
+Video upload and management
+Search, filtering, and categorization of learning videos
+Responsive and accessible user interface
+RESTful API architecture
+MongoDB database integration
+Technology Stack
 
-2. Project Objectives
+Frontend
 
-The main goal is to develop an intelligent interface that translates gestures into text or speech using deep learning. Specific objectives include:
+React.js
+HTML5
+CSS3
+JavaScript
 
-Gesture Recognition: Capture and recognize hand gestures using cameras or motion sensors.
+Backend
 
-Deep Learning Model: Use LSTM (Long Short-Term Memory) networks to interpret temporal sequences of gestures accurately.
+Python
+Flask
 
-Real-Time Translation: Convert recognized gestures into readable text or synthesized speech.
+Artificial Intelligence
 
-User-Friendly Interface: Provide a simple interface for easy interaction by deaf individuals and their communication partners.
+TensorFlow / Keras
+OpenCV
+MediaPipe
 
-Accuracy & Adaptability: Ensure high recognition accuracy and adaptability to different users’ gesture styles.
+Database
 
-3. Tech Stack
+MongoDB
 
-Front-End / Interface: Python (Tkinter / PyQt) or Web-based React.js interface
+Tools
 
-Back-End: Python (Flask / FastAPI for API handling)
+Git
+GitHub
+Visual Studio Code
+Project Objectives
+Improve communication accessibility for sign language users.
+Enable real-time sign language recognition using AI.
+Provide an interactive platform for learning sign language.
+Build a scalable and modular architecture for future enhancements.
+Promote inclusive communication through modern technology.
+Future Enhancements
+Support for multiple sign languages.
+Speech-to-sign and text-to-sign translation.
+Real-time video calling with live sign language recognition.
+Mobile application for Android and iOS.
+Personalized learning recommendations.
+Improved AI models for higher recognition accuracy.
 
-Deep Learning Framework: TensorFlow / Keras for LSTM model
-
-Data Processing: OpenCV (for video capture), NumPy, Pandas
-
-Hardware: Webcam / RGB-D camera / Motion sensors (optional gloves with sensors)
-
-Speech Synthesis (Optional): pyttsx3 or Google Text-to-Speech API
-
-4. Modules
-
-Data Acquisition Module
-
-Capture hand gestures via camera or sensors.
-
-Preprocess images/videos (resizing, normalization, background subtraction).
-
-Gesture Recognition Module
-
-Feed sequences of frames into LSTM for temporal analysis.
-
-Recognize gestures as per trained model classes.
-
-Translation Module
-
-Convert recognized gestures into text or speech.
-
-Display output on the interface or play audio via speaker.
-
-User Interface Module
-
-Interactive dashboard for real-time communication.
-
-Option to record, replay, or save translations.
-
-5. Key Features
-
-Real-time gesture-to-text conversion.
-
-LSTM-based model for temporal gesture sequence recognition.
-
-Simple and intuitive interface for easy use.
-
-Option to convert text into speech for communication with non-deaf individuals.
-
-Adaptable to multiple users and gesture variations.
-
-6. Expected Outcomes
-
-Enable real-time communication for deaf and mute individuals.
-
-Reduce dependency on intermediaries for communication.
-
-Improve social inclusion and accessibility.
-
-Provide a foundation for further integration into mobile or wearable devices.
+This project demonstrates the practical application of artificial intelligence, computer vision, and full-stack web development to create an inclusive communication platform that supports accessibility, learning, and real-time interaction for sign language users.
