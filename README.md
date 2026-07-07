@@ -58,8 +58,8 @@ GestureBridge offers an integrated platform that enables users to:
 
 ### Backend
 
-* Flask
-* Flask-CORS
+* Express js
+* node js
 * REST API
 
 ### Artificial Intelligence
