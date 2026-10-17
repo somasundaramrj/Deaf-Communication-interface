@@ -1,0 +1,32 @@
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.map-svg {
+  border: 1px solid #ccc;
+  width: 80%;
+  height: auto;
+}
+
+.map-bg {
+  fill: #e0f7fa;
+}
+
+.city {
+  fill: orange;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+
+.city:hover {
+  fill: red;
+}
+
+text {
+  font-size: 12px;
+  text-anchor: middle;
+  pointer-events: none; /* So clicks go to the circle */
+  font-family: Arial, sans-serif;
+}
